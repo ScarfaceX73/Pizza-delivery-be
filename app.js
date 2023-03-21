@@ -22,7 +22,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 //SETTING CUSTOM MIDDLEWARE
 
 app.use((req, res, next) => {
-  let allowedOrigin = ["http://localhost:3000", "https://master--brilliant-malasada-8dfefd.netlify.app"]
+  let allowedOrigin = ["http://localhost:3000", "https://brilliant-malasada-8dfefd.netlify.app/"]
   if (allowedOrigin.indexOf(req.headers.origin) != -1) {
     res.header("Access-Control-Allow-Origin", req.headers.origin);
     res.setHeader("Access-Control-Allow-Credentials", true);
